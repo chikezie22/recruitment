@@ -1,0 +1,10 @@
+export { default as Home } from '@/assets/Home 1.svg';
+export { default as Profile } from '@/assets/Profile 1.svg';
+export { default as Scroll } from '@/assets/Scroll.svg';
+export { default as Toolbox } from '@/assets/Toolbox.svg';
+export { default as Article } from '@/assets/Article.svg';
+export { default as Logo } from '@/assets/logo.svg';
+export { default as MessageNotification } from '@/assets/message-notif.svg';
+export { default as Notification } from '@/assets/notification.svg';
+export { default as Calendar } from '@/assets/calendar.svg';
+export { default as Calculator } from '@/assets/calculator.svg';
