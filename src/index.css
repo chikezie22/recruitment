@@ -50,6 +50,10 @@
   font-display: swap;
 }
 
+body {
+  font-family: 'Euclid', sans-serif;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -89,6 +93,10 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --font-euclid: 'Euclid', sans-serif;
+  --color-ui: var(--color-ui);
+  --color-semi-gray: var(--color-semi-gray);
+  --color-main-black: var(--color-main-black);
+  --color-deep-gray: var(--color-deep-gray);
 }
 
 :root {
@@ -124,6 +132,10 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --color-ui: #f9fafb;
+  --color-semi-gray: #919191;
+  --color-main-black: #191919;
+  --color-deep-gray: #3d3d3d;
 }
 
 .dark {
