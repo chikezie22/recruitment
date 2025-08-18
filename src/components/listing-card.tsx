@@ -24,7 +24,7 @@ const listings = [
 
 const ListingCard = () => {
   return (
-    <div className="space-y-5">
+    <div className="space-y-5 ">
       {listings.map(({ Icon, text, total, active, archived, textOne, textTwo, textThree }) => (
         <div className="border border-[#E4E4E4] rounded-2xl w-[407px] space-y-[20px] p-4">
           <div className="flex justify-between">

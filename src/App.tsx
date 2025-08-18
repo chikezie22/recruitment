@@ -75,20 +75,40 @@ const App = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="justify-self-center">
             <ListingCard />
           </div>
         </div>
         {/* photo section */}
-        <div className="flex gap-[15px]">
+        <div className="flex gap-[15px] flex-wrap justify-center">
           <div className="w-[418px] h-[286px] rounded-[12px] overflow-clip">
-            <img src={PhotoOne} alt="photo" />
+            <img src={PhotoOne} alt="photo" className="w-full h-full object-cover" />
           </div>
-          <div className="w-[418px] h-[286px] rounded-[12px] overflow-clip">
-            <img src={PhotoTwo} alt="photo" />
+          <div className="w-[418px] h-[286px] rounded-[12px] overflow-clip relative">
+            <img src={PhotoTwo} alt="photo" className="w-full h-full object-cover" />
+            <div className="absolute bottom-5 left-4 text-white">
+              <h4 className="uppercase text-sm">most wATCHLISTED</h4>
+              <h4 className="font-semibold text-[18px]">Urban Prime Plaza Premiere</h4>
+            </div>
+            <div className="absolute bottom-2 left-1/2  flex space-x-1.5">
+              <div className="w-2 h-2 bg-white rounded-full"></div>
+              <div className="w-2 h-2 bg-white/40 rounded-full"></div>
+              <div className="w-2 h-2 bg-white/40 rounded-full"></div>
+            </div>
           </div>
-          <div className="w-[418px] h-[286px] rounded-[12px] overflow-clip">
-            <img src={PhotoThree} alt="photo" />
+          <div className="w-[418px] h-[286px] rounded-[12px] overflow-clip relative">
+            <img src={PhotoThree} alt="photo" className="w-full h-full object-cover" />
+            <div className="absolute bottom-5 left-4 text-white">
+              <h4 className="uppercase text-sm">HOTTEST LISTING</h4>
+              <h4 className="font-semibold text-[18px]">Urban Prime Plaza Premiere</h4>
+            </div>
+            <div className="absolute bottom-2 left-1/2  flex space-x-1.5">
+              <div className="w-2 h-2 bg-white rounded-full"></div>
+              <div className="w-2 h-2 bg-white/40 rounded-full"></div>
+              <div className="w-2 h-2 bg-white/40 rounded-full"></div>
+              <div className="w-2 h-2 bg-white/40 rounded-full"></div>
+              <div className="w-2 h-2 bg-white/40 rounded-full"></div>
+            </div>
           </div>
         </div>
       </div>
