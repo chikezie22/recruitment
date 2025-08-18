@@ -13,7 +13,7 @@ const App = () => {
     <div className="space-y-3 pb-3">
       <NavBar />
       <Main />
-      <div className="px-[78px] space-y-3 max-w-[1440px] mx-auto">
+      <div className="px-5 sm:px-[78px] space-y-3 max-w-[1440px] mx-auto">
         <h1 className="font-euclid font-semibold text-main-black">Welcome, Ahmed</h1>
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_407px] gap-5">
           <div className="border border-[#E4E4E4] rounded-[16px] p-[22px] max-w-fit">
@@ -78,7 +78,7 @@ const App = () => {
               </div>
             </div>
           </div>
-          <div className="justify-self-center">
+          <div className="justify-self-center w-full">
             <ListingCard />
           </div>
         </div>

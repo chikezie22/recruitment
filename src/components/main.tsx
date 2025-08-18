@@ -22,7 +22,7 @@ const items = [
 
 const Main = () => {
   return (
-    <div className="px-[78px] py-[14px] max-w-[1440px] mx-auto">
+    <div className="px-5 sm:px-[78px] py-[14px] max-w-[1440px] mx-auto">
       <div className="flex justify-between flex-wrap">
         <div className="flex px-[24px] py-[7px] bg-[#F5F5F5] rounded-[8px] w-fit items-center gap-2">
           <Home />

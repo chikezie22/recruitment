@@ -40,7 +40,9 @@ const ChartDetails = () => {
   return (
     <div className="flex flex-wrap gap-2 justify-center">
       {details.map(({ price, p, Icon, percentage, text, percent }) => (
-        <div className={`p-4 space-y-2 border border-[ #E4E4E4] rounded-[12px] w-[189px] h-[72px]`}>
+        <div
+          className={`p-4 space-y-2 border border-[ #E4E4E4] rounded-[12px] sm:max-w-[189px] h-[72px] w-full`}
+        >
           <p className={`font-semibold text-[19px] ${text}`}>{price}</p>
           <div className="flex items-center gap-1">
             <p className={`text-deep-gray text-[10px]`}>{p}</p>
