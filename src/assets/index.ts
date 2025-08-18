@@ -12,4 +12,22 @@ export { default as Setting } from '@/assets/setting-4.svg?react';
 export { default as TrendUp } from '@/assets/trend-up.svg?react';
 export { default as Frame } from '@/assets/frame.svg?react';
 export { default as HeaderText } from '@/assets/Header text.svg?react';
+export { default as UseFour } from '@/assets/UsersFour.svg?react';
+export { default as Contact } from '@/assets/contact.svg?react';
+export { default as Lock } from '@/assets/lock.svg?react';
+export { default as Logout } from '@/assets/logout.svg?react';
+export { default as Sheild } from '@/assets/sheild.svg?react';
+export { default as Search } from '@/assets/search.svg?react';
+export { default as ArrowUp } from '@/assets/arrow-up.svg?react';
+export { default as ArrowDown } from '@/assets/arrow-down.svg?react';
+export { default as RedArrowDown } from '@/assets/red-arrow-down.svg?react';
+export { default as LeftArrow } from '@/assets/left-arrow.svg?react';
+export { default as RightArrow } from '@/assets/right-arrow.svg?react';
+
+export { default as Profile1 } from '@/assets/profile.svg?react';
+export { default as SolarHome } from '@/assets/solar_home-linear.svg?react';
+export { default as PhotoOne } from '@/assets/photo-one.png';
+export { default as PhotoTwo } from '@/assets/photo-two.jpg';
+export { default as PhotoThree } from '@/assets/photo-three.png';
+
 export { default as Sketch } from '@/assets/Sketch.png';

@@ -9,6 +9,11 @@ import {
   TrendUp,
   Frame,
   HeaderText,
+  UseFour,
+  Contact,
+  Lock,
+  Sheild,
+  Logout,
 } from '@/assets';
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';
 import { useState } from 'react';
@@ -17,10 +22,8 @@ import {
   Dialog,
   DialogClose,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
 
@@ -33,6 +36,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from './ui/sheet';
+
+import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
 
 const navIcons = [
   {
@@ -75,6 +80,32 @@ const budgeting = [
     Icon: Frame,
     title: `Adjust figures and forecast with ease`,
     p: `Edit amounts, apply percentage changes, or roll forward last year’s data—all in one place.`,
+  },
+];
+
+const users = [
+  {
+    Icon: UseFour,
+    text: `Teams`,
+  },
+
+  {
+    Icon: Contact,
+    text: '',
+  },
+
+  {
+    Icon: Lock,
+    text: '',
+  },
+
+  {
+    Icon: Sheild,
+    text: ``,
+  },
+  {
+    Icon: Logout,
+    text: `Logout`,
   },
 ];
 
@@ -186,15 +217,39 @@ const NavBar = () => {
               return iconElement;
             })}
             <Tooltip>
-              <TooltipTrigger asChild>
-                <div
-                  className="h-[40px] aspect-square rounded-full
-          bg-white text-black text-[23px] flex items-center justify-center font-euclid font-medium"
-                >
-                  D
-                </div>
-              </TooltipTrigger>
-              <TooltipContent className="mt-2 bg-ui px-4 py-3">
+              <Popover>
+                <TooltipTrigger asChild>
+                  <PopoverTrigger asChild>
+                    <div
+                      className="h-[40px] aspect-square rounded-full
+          bg-white text-black text-[23px] flex items-center justify-center font-euclid font-medium cursor-pointer relative"
+                    >
+                      D
+                    </div>
+                  </PopoverTrigger>
+                </TooltipTrigger>
+
+                <PopoverContent className="sm:max-w-[377px] space-y-3 p-4 shadow-[4px_4px_8px_rgba(123,157,157,0.15)] border-0 absolute -right-3 top-1">
+                  <div className="px-3 py-4 flex items-center gap-3">
+                    <div className="w-[56px] aspect-square rounded-full bg-[#176D58] flex justify-center items-center text-white font-medium text-[32px]">
+                      D
+                    </div>
+                    <div className="space-y-2">
+                      <p className="text-black font-semibold">Dylan Frank</p>
+                      <p className="text-gray-500">dylan96@mail.com</p>
+                    </div>
+                  </div>
+
+                  {users.map(({ Icon, text }) => (
+                    <div key={text} className="py-3 flex items-center gap-4">
+                      <Icon />
+                      <p className="font-medium text-[18px]">{text}</p>
+                    </div>
+                  ))}
+                </PopoverContent>
+              </Popover>
+
+              <TooltipContent className="mt-2 bg-ui px-4 py-3 ">
                 <div className="flex flex-col gap-2">
                   <p className="font-euclid font-medium text-main-black">Dylan Frank</p>
                   <p className="text-semi-gray font-euclid font-light">dylanfrank96@gmail.com</p>
