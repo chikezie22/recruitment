@@ -16,7 +16,7 @@ const App = () => {
       <div className="px-[78px] space-y-3 max-w-[1440px] mx-auto">
         <h1 className="font-euclid font-semibold text-main-black">Welcome, Ahmed</h1>
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_407px] gap-5">
-          <div className="border border-[#E4E4E4] rounded-[16px] p-[22px]">
+          <div className="border border-[#E4E4E4] rounded-[16px] p-[22px] max-w-fit">
             <div className="flex justify-between items-center">
               <div className="space-y-3">
                 <h3 className="font-semibold text-[20px] text-main-black">Sales Overview</h3>
@@ -29,7 +29,7 @@ const App = () => {
                 >
                   View Transactions
                 </Button>
-                <div className="float-end flex gap-3 my-3">
+                <div className="float-end flex gap-3 my-3 flex-wrap justify-center">
                   <Button
                     variant={'outline'}
                     className={`${
