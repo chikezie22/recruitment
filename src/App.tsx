@@ -23,7 +23,10 @@ const App = () => {
                 <p className="text-xs">Showing overview Jan 2022 - Sep 2022</p>
               </div>
               <div className="flex flex-col">
-                <Button variant={'outline'} className="font-medium text-xs p-4 rounded-[78px]">
+                <Button
+                  variant={'outline'}
+                  className="font-medium text-xs p-4 rounded-[78px] max-w-[177px]  self-end"
+                >
                   View Transactions
                 </Button>
                 <div className="float-end flex gap-3 my-3">

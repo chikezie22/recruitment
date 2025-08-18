@@ -1,7 +1,27 @@
+import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from 'recharts';
 
-const MonthlyBarChart = () => {
-  const data = [
+// Define types for the data
+interface ChartData {
+  month: string;
+  blue: number;
+  green: number;
+  red: number;
+}
+
+// Define types for tooltip props
+interface TooltipProps {
+  active?: boolean;
+  payload?: Array<{
+    name: string;
+    value: number;
+    color: string;
+  }>;
+  label?: string;
+}
+
+const MonthlyBarChart: React.FC = () => {
+  const data: ChartData[] = [
     { month: 'Jan', blue: 35, green: 27, red: 9 },
     { month: 'Feb', blue: 5, green: 27, red: 9 },
     { month: 'Mar', blue: 14, green: 6, red: 2 },
@@ -13,12 +33,12 @@ const MonthlyBarChart = () => {
     { month: 'Sep', blue: 36, green: 33, red: 6 },
   ];
 
-  const CustomTooltip = ({ active, payload, label }) => {
+  const CustomTooltip: React.FC<TooltipProps> = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-white p-3 border border-gray-200 rounded-lg shadow-lg">
           <p className="font-medium text-gray-900">{`${label}`}</p>
-          {payload.map((entry, index) => (
+          {payload.map((entry, index: number) => (
             <p key={index} style={{ color: entry.color }} className="text-sm">
               {`${entry.name}: ${entry.value}m`}
             </p>
@@ -30,11 +50,10 @@ const MonthlyBarChart = () => {
   };
 
   // Custom Y-axis tick formatter
-  const formatYAxisTick = (value) => `${value}m`;
+  const formatYAxisTick = (value: number): string => `${value}m`;
 
   return (
-    <div className="w-full h-[197px]  bg-gray-50 rounded-lg">
-      {/* <h3 className="text-lg font-semibold text-gray-900 mb-4">Monthly Performance Chart</h3> */}
+    <div className="w-full h-[197px] bg-gray-50 rounded-lg">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={data}
@@ -85,25 +104,15 @@ const MonthlyBarChart = () => {
           />
 
           {/* Red bars */}
-          <Bar dataKey="red" name="Series 3" fill="#DC2626" radius={[3, 3, 0, 0]} maxBarSize={32} />
+          <Bar 
+            dataKey="red" 
+            name="Series 3" 
+            fill="#DC2626" 
+            radius={[3, 3, 0, 0]} 
+            maxBarSize={32} 
+          />
         </BarChart>
       </ResponsiveContainer>
-
-      {/* Custom Legend */}
-      {/* <div className="flex justify-center mt-4 gap-6">
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 bg-blue-600 rounded-sm"></div>
-          <span className="text-sm text-gray-600">Series 1</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 bg-green-600 rounded-sm"></div>
-          <span className="text-sm text-gray-600">Series 2</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 bg-red-600 rounded-sm"></div>
-          <span className="text-sm text-gray-600">Series 3</span>
-        </div>
-      </div> */}
     </div>
   );
 };
